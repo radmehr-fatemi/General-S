@@ -39,19 +39,19 @@ export default function Slider() {
       >
         <SwiperSlide> <div className='slider_div'>
           <p> Best Products </p>
-           <Image src="/images/banner/banner1.jpg" width={2000} height={1600} />
+           <Image src="/images/banner/banner1.jpg" width={2000} height={1600} alt='store photo' />
         </div></SwiperSlide>
         <SwiperSlide> <div className='slider_div'>
           <p> Buy anythings </p>
-           <Image src="/images/banner/banner2.jpg" width={2000} height={1600} />
+           <Image src="/images/banner/banner2.jpg" width={2000} height={1600} alt='store photo' />
         </div></SwiperSlide>
         <SwiperSlide> <div className='slider_div'>
           <p> Your Store </p>
-           <Image src="/images/banner/banner3.jpg" width={2000} height={1600} />
+           <Image src="/images/banner/banner3.jpg" width={2000} height={1600} alt='store photo' />
         </div></SwiperSlide>
         <SwiperSlide> <div className='slider_div'>
           <p> General Store </p>
-           <Image src="/images/banner/banner4.jpg" width={2000} height={1600} />
+           <Image src="/images/banner/banner4.jpg" width={2000} height={1600} alt='store photo' />
         </div></SwiperSlide>
       </Swiper>
 
