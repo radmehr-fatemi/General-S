@@ -1,9 +1,10 @@
 // Import Swiper React components
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation ,EffectFade } from 'swiper/modules';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
+import 'swiper/css/effect-fade';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -14,6 +15,7 @@ export default function Slider() {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
+        effect={'fade'}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -22,7 +24,7 @@ export default function Slider() {
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation ,EffectFade]}
         className="mySwiper"
         style={{
           "--swiper-pagination-color": "#fff",
@@ -44,7 +46,7 @@ export default function Slider() {
            <Image src="/images/banner/banner2.jpg" width={2000} height={1600} />
         </div></SwiperSlide>
         <SwiperSlide> <div className='slider_div'>
-          <p> Tour Store </p>
+          <p> Your Store </p>
            <Image src="/images/banner/banner3.jpg" width={2000} height={1600} />
         </div></SwiperSlide>
         <SwiperSlide> <div className='slider_div'>

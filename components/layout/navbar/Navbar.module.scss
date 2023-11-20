@@ -13,6 +13,7 @@
     box-shadow: 0 .5px 1px $color-shadow;
     position: sticky;
     top: 0;
+    z-index: 100;
 
     h3 {
         color: $color-white;
@@ -45,7 +46,6 @@
     }
 
     a:nth-child(2) {
-        margin-right: 2rem;
         font-weight: 700;
         
         @include md {
@@ -56,19 +56,20 @@
         }
 
     }
-    a:nth-child(3) {
+    .searchIcon {
         font-weight: 700;
         font-size: 1.3rem;
         width: 20px;
+        margin: 0 1rem;
+    }
 
         @include md {
-            &:hover {
+            svg:hover {
                 color: $color-blue;
                 transform: rotate(-10deg);
                 font-size: 1.4rem;
             }
         }
-    }
 }
 
 // .searchIcon {}

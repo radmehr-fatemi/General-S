@@ -4,6 +4,9 @@ import { VscSearch } from "react-icons/vsc";
 //Style
 import styles from "./Navbar.module.scss";
 
+//Icon
+import Cart from "components/icons/Cart";
+
 const Navbar = () => {
     return (
         <div className={ styles.navbar } >
@@ -14,6 +17,7 @@ const Navbar = () => {
                 <span></span>
                 <Link href={`/menu`} >Categories</Link>
                 <Link href={`/search`} > <VscSearch className={ styles.searchIcon } /> </Link>
+                <Link href={`/cart`} > <Cart /> </Link>
             </div>
         </div>
     );
