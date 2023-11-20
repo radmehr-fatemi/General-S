@@ -4,10 +4,10 @@ import Link from "next/link";
 import style from "./CardS.module.scss";
 
 //functions
-import { shortHandler } from "helper/functions";
+import { shortHandler } from "../../../helper/functions";
 
 //Icon
-import Star from "components/icons/Star";
+import Star from "../../../components/icons/Star";
 
 const CardS = ({ product }) => {
 

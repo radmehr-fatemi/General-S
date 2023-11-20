@@ -1,5 +1,5 @@
 @import "../../../styles/variables.scss";
-@import "../../../styles/keyframes.scss";
+// @import "../../../styles/Keyframes.scss";
 
 .navbar {
     @include flex();
@@ -9,7 +9,7 @@
     background: linear-gradient( to right bottom , $color-blue ,rgb(51, 75, 80));
     overflow: hidden;
     height: 54px;
-    animation: ShowScrollTop .3s .2s;
+    // animation: ShowScrollTop .3s .2s;
     box-shadow: 0 .5px 1px $color-shadow;
     position: sticky;
     top: 0;
