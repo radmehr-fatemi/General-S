@@ -1,0 +1,29 @@
+$color-white:#fff;
+$color-red:rgb(255, 0, 0);
+$color-green:rgb(48, 181, 48);
+$color-green2:rgb(59, 207, 59);
+$color-blue:rgb(38, 149, 157);
+$color-blue2:rgb(44, 169, 178);
+$color-shadow:#a6bdbc;;
+
+@mixin mx () {
+    max-width: 1600px;
+    margin: 0 auto;
+
+    @include md {
+        width: 70vw;
+    }
+}
+
+@mixin flex ( $justify:space-between ,$align:center ) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    @content
+};
+
+@mixin md () {
+    @media ( min-width: 768px ) {
+        @content
+    }
+}

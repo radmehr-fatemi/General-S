@@ -1,0 +1,17 @@
+@import "@/styles/variables.scss";
+
+.footer {
+    @include mx();
+    width: 100vw;
+    background-color: rgb(0, 81, 95);
+    padding: .2rem,;
+    text-align: center;
+    
+    a {
+        color: $color-white;
+    }
+
+    @include md {
+        width: 100vw;
+    }
+}

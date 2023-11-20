@@ -1,0 +1,77 @@
+@import "@/styles/variables.scss";
+@import "@/styles/keyframes.scss";
+
+.navbar {
+    @include flex();
+    @include mx();
+    width: 100vw;
+    background-color:$color-blue ;
+    overflow: hidden;
+    height: 54px;
+    animation: ShowScrollTop .3s .2s;
+    box-shadow: 0 .5px 1px $color-shadow;
+    position: sticky;
+    top: 0;
+
+    h3 {
+        color: $color-white;
+    }
+}
+
+.field1 {
+    padding: 0 1.2rem;
+    width: 10%;
+}
+
+.field2 {
+    background-color: $color-white;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 60%;
+    position: relative;
+    @include flex(flex-end);
+        
+    @include md {
+        width: 70%;
+    }
+    
+    span {
+        position: absolute;
+        left: -3rem;
+        width: 60px;
+        flex: 1;
+        display: inline-block;
+        height: 100%;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        background-color: $color-white;
+    }
+
+    a:nth-child(2) {
+        margin-right: 2rem;
+        font-weight: 700;
+        
+        @include md {
+            &:hover {
+                color: $color-blue;
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+    a:nth-child(3) {
+        font-weight: 700;
+        font-size: 1.3rem;
+        width: 20px;
+
+        @include md {
+            &:hover {
+                color: $color-blue;
+                transform: rotate(-10deg);
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+// .searchIcon {}
