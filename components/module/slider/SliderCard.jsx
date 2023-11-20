@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 //Component
-import CardS from 'components/module/card/CardS';
+import CardS from "../card/CardS";
 
 export default function SliderCard({ products, title }) {
     console.log(products)
