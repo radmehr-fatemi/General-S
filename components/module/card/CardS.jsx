@@ -1,5 +1,6 @@
-//Style
 import Link from "next/link";
+
+//Style
 import style from "./CardS.module.scss";
 
 //functions

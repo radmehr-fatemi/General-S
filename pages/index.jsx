@@ -1,5 +1,5 @@
 //Component
-import Spinner from "utils/spinner/Spinner";
+import Spinner from "../utils/spinner/Spinner";
 import HomePage from "../components/template/home/HomePage";
 
 const Home = ( props ) => {

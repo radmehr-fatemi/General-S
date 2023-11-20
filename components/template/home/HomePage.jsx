@@ -2,8 +2,8 @@
 import styles from "./HomePage.module.scss";
 
 //Component
-import Banner from "components/module/slider/Banner";
-import SliderCard from "components/module/slider/SliderCard";
+import Banner from "../../module/slider/Banner";
+import SliderCard from "../../module/slider/SliderCard";
 
 const HomePage = ( {data} ) => {
 

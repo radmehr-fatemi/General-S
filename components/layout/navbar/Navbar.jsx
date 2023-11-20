@@ -5,7 +5,7 @@ import { VscSearch } from "react-icons/vsc";
 import styles from "./Navbar.module.scss";
 
 //Icon
-import Cart from "components/icons/Cart";
+import Cart from "../../icons/Cart";
 
 const Navbar = () => {
     return (

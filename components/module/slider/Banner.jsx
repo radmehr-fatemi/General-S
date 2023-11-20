@@ -1,5 +1,5 @@
 // Import Swiper React components
-import { Autoplay, Pagination, Navigation ,EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -24,7 +24,7 @@ export default function Slider() {
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation ,EffectFade]}
+        modules={[Autoplay, Pagination, Navigation, EffectFade]}
         className="mySwiper"
         style={{
           "--swiper-pagination-color": "#fff",
@@ -37,22 +37,34 @@ export default function Slider() {
 
         }}
       >
-        <SwiperSlide> <div className='slider_div'>
-          <p> Best Products </p>
-           <Image src="/images/banner/banner1.jpg" width={2000} height={1600} alt='store photo' priority={true} />
-        </div></SwiperSlide>
-        <SwiperSlide> <div className='slider_div'>
-          <p> Buy anythings </p>
-           <Image src="/images/banner/banner2.jpg" width={2000} height={1600} alt='store photo' />
-        </div></SwiperSlide>
-        <SwiperSlide> <div className='slider_div'>
-          <p> Your Store </p>
-           <Image src="/images/banner/banner3.jpg" width={2000} height={1600} alt='store photo' />
-        </div></SwiperSlide>
-        <SwiperSlide> <div className='slider_div'>
-          <p> General Store </p>
-           <Image src="/images/banner/banner4.jpg" width={2000} height={1600} alt='store photo' />
-        </div></SwiperSlide>
+        
+        <SwiperSlide>
+          <div className='slider_div'>
+            <p> Best Products </p>
+            <Image src="/images/banner/banner1.jpg" width={2000} height={1600} alt='store photo' priority={true} />
+          </div>
+        </SwiperSlide>
+        
+        <SwiperSlide>
+          <div className='slider_div'>
+            <p> Buy anythings </p>
+            <Image src="/images/banner/banner2.jpg" width={2000} height={1600} alt='store photo' />
+          </div>
+        </SwiperSlide>
+        
+        <SwiperSlide>
+          <div className='slider_div'>
+            <p> Your Store </p>
+            <Image src="/images/banner/banner3.jpg" width={2000} height={1600} alt='store photo' />
+          </div>
+        </SwiperSlide>
+        
+        <SwiperSlide>
+          <div className='slider_div'>
+            <p> General Store </p>
+            <Image src="/images/banner/banner4.jpg" width={2000} height={1600} alt='store photo' />
+          </div>
+        </SwiperSlide>
       </Swiper>
 
       <style>{`
