@@ -1,8 +1,11 @@
+@import "@/styles/keyframes.scss";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   transition: all .1s;
+  animation: Show .3s;
 }
 
 body {
@@ -12,7 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(12, 91, 92)
+  color: rgb(12, 91, 92);
 }
 
 li {

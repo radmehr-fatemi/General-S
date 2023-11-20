@@ -8,11 +8,11 @@ const Navbar = () => {
     return (
         <div className={ styles.navbar } >
             <div className={ styles.field1 } >
-                <Link href={`/`} > <h3>Home</h3> </Link>
+                <Link href={`/`} > <h3>General_S</h3> </Link>
             </div>
             <div className={ styles.field2 } >
                 <span></span>
-                <Link href={`/menu`} >Menu</Link>
+                <Link href={`/menu`} >Categories</Link>
                 <Link href={`/search`} > <VscSearch className={ styles.searchIcon } /> </Link>
             </div>
         </div>

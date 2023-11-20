@@ -1,7 +1,13 @@
-const HomePage = () => {
+//Style
+import styles from "./HomePage.module.scss";
+
+//Component
+import Banner from "components/module/slider/Banner";
+
+const HomePage = ({products}) => {
     return (
-        <div>
-            Home
+        <div className={ styles.homePage } >
+            <Banner />
         </div>
     );
 };

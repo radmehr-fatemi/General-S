@@ -6,6 +6,7 @@
             "@/module/*": ["/components/module/*"],
             "@/template/*": ["/components/template/*"],
             "@/styles/*": ["/styles/*"],
+            "@/images/*": ["/public/images/*"],
         }
     }
 }

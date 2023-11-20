@@ -9,10 +9,6 @@ $color-shadow:#a6bdbc;;
 @mixin mx () {
     max-width: 1600px;
     margin: 0 auto;
-
-    @include md {
-        width: 70vw;
-    }
 }
 
 @mixin flex ( $justify:space-between ,$align:center ) {
