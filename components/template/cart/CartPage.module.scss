@@ -1,0 +1,71 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/Keyframes.scss";
+
+.cart {
+    @include mx();
+    @include flex(flex-start);
+    flex-direction: column;
+    min-height: 90vh;
+    width: 100vw;
+}
+
+.header {
+    padding: 1rem;
+
+    h1 {
+        background-color: $color-blue2;
+        color: $color-white;
+        padding: .4rem 2rem;
+        border-bottom-right-radius: 40px;
+        border-top-left-radius: 40px;
+    }
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    
+    @include md {
+        padding: 1rem;
+    }
+}
+
+.checkout {
+    position: fixed;
+    bottom: 3rem;
+    width: 300px;
+    @include flex(center);
+    background-color: rgba(193, 255, 255, 0.68);
+    border-radius: 40px;
+    box-shadow: 0 0 12px #60c3ce;
+    backdrop-filter: blur(6px);
+}
+
+.checkout_1, 
+.checkout_2 {
+    padding: 1rem;
+    @include flex(center);
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+        margin-left: .4rem;
+        color: $color-blue;
+        font-weight: 700;
+    }
+
+    button {
+        border: none;
+        padding: .4rem 1rem;
+        background-color: $color-blue;
+        color: $color-white;
+        border-radius: 4px;
+        font-size: 1.2rem;
+    }
+} 

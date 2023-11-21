@@ -5,13 +5,11 @@ import Link from "next/link";
 //Component
 import SliderProduct from "../../module/slider/BannerProduct";
 
-//Icon
-import Cross from "../../icons/Cross";
-
 //Style
 import styles from "./DetailsPage.module.scss";
 
 //Icon
+import Cross from "../../icons/Cross";
 import Star from "../../icons/Star";
 import Trash from "../../icons/Trash";
 
@@ -90,7 +88,6 @@ const DetailsPage = ({ productData }) => {
                     }
                 </div>
 
-                <div></div>
             </div>
         </div>
     );
