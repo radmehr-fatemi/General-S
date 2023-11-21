@@ -1,0 +1,133 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/Keyframes.scss";
+
+.detailsPage {
+    animation: ShowPage .3s;
+    min-height: calc( 100vh - 78px );
+    padding: .6rem 0;
+    background-color: rgb(165, 192, 192);
+
+    svg {
+        width: 50px;
+        position: sticky;
+        top: 4rem;
+        cursor: pointer;
+    }
+}
+
+.field1,
+.field2,
+.field3,
+.field4,
+.field5, 
+.field6 {
+    padding: .4rem 0;
+    border-bottom: 1px solid $color-shadow;
+}
+
+.fields {
+    width: 94%;
+    min-height: 40vh;
+    margin: auto;
+    padding: .6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+.field1 {
+    @include flex();
+    
+    span {
+        @include flex();
+        font-size: 1.1rem;
+    }
+        
+    svg {
+        width: 40px;
+    }
+
+    h2 {
+        width: 70%;
+    }
+
+}
+
+
+.field2 {
+    @include flex();
+
+    p {
+        color: $color-red;
+        text-decoration: line-through;
+        font-size: 1.2rem;
+    }
+
+    span {
+        &:nth-child(1) {
+            font-size: 1.4rem;
+            color: $color-blue2;
+            font-weight: 700;
+        }
+        
+        &:nth-child(2) {
+            color: $color-red;
+            font-weight: 700;
+            margin-left: .4rem;
+        }
+
+    }
+
+    .field2Dis {
+        display: flex;
+    }
+}
+
+.field3 ,.field4 {
+    span:nth-child(1) {
+        font-size: 1.1rem;
+        margin-right: .2rem;
+    }
+}
+
+.field4 a {
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.field5 {
+    span {
+        font-size: 1.1rem;
+    }
+
+    p {
+        margin-top: .1rem;
+        text-indent: .2rem
+    }
+
+    p {
+        font-size: .9rem
+    }
+}
+
+.field6 {
+    @include flex(center);
+    border: none;
+
+    button {
+        border: none;
+        width: 100px;
+        height: 30px;
+        background-color: $color-blue;
+        color: $color-white;
+        border-radius: 4px;
+        font-size: 1rem;
+
+        @include md {
+            &:hover {
+                background-color: $color-blue2;
+            }
+        }
+    }
+}
