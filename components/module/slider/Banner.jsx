@@ -128,6 +128,9 @@ export default function Slider() {
               .banner img {
                 height: 400px;
               }
+            .slider_div p {
+              font-size:3rem;
+            }
           }
 
         `}</style>

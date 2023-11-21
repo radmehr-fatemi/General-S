@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState  ,useContext} from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -14,11 +14,15 @@ import styles from "./DetailsPage.module.scss";
 //Icon
 import Star from "../../icons/Star";
 
+//Context
+import { CartContext } from "../../../context/CartContextProvider";
+
 const DetailsPage = ({ productData }) => {
 
     const { title, price, discountPercentage: dis, rating, brand, category, description, images, stock } = productData;
     const router = useRouter();
     const [isCross, setIsCross] = useState(false);
+    const { state ,dispatch } = useContext(CartContext);
 
     const crossHandler = () => {
         setIsCross(true)
@@ -70,7 +74,12 @@ const DetailsPage = ({ productData }) => {
                 </div>
 
                 <div className={ styles.field6 } >
-                    <button> Add to Cart </button>
+                    <button onClick={ () => dispatch({ type:"ADD_ITEM" ,payload:productData }) } > Add to Cart </button>
+                    <button onClick={ () => dispatch({ type:"INCREMENT" ,payload:productData }) } > + </button>
+                    <button onClick={ () => dispatch({ type:"DECREMENT" ,payload:productData }) } > - </button>
+                    <button onClick={ () => dispatch({ type:"REMOVE" ,payload:productData }) } > Remove </button>
+                    <button onClick={ () => dispatch({ type:"CLEAR"}) } > Clear </button>
+                    <button onClick={ () => dispatch({ type:"CHECKOUT"}) } > Checkout </button>
                 </div>
 
                 <div></div>
