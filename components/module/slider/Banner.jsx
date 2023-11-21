@@ -71,7 +71,7 @@ export default function Slider() {
 
           .banner {
             max-width:1600px;
-            margin:0 auto;
+            margin: 0 auto;
             position: relative;
             width: 100vw;
             animation: Show .3s;
@@ -79,13 +79,14 @@ export default function Slider() {
 
           .banner img {
                 width: 100%;
-                height: 200px;
+                height: 240px;
             }
 
             .slider_div {
               width:100%;
               height:fit-content;
               position:relative;
+              overflow:hidden;
             }
 
             .slider_div p {
@@ -93,7 +94,7 @@ export default function Slider() {
               top:0;
               color:#fff;
               width:100%;
-              height:100%;
+              height:98%;
               display:flex;
               justify-content:center;
               align-items:center;

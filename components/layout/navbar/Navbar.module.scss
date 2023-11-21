@@ -1,5 +1,5 @@
 @import "../../../styles/variables.scss";
-// @import "../../../styles/Keyframes.scss";
+@import "../../../styles/Keyframes.scss";
 
 .navbar {
     @include flex();
@@ -9,7 +9,7 @@
     background: linear-gradient( to right bottom , $color-blue ,rgb(51, 75, 80));
     overflow: hidden;
     height: 54px;
-    // animation: ShowScrollTop .3s .2s;
+    animation: ShowScrollTop .3s .2s;
     box-shadow: 0 .5px 1px $color-shadow;
     position: sticky;
     top: 0;
@@ -32,6 +32,11 @@
     width: 56%;
     position: relative;
     @include flex(flex-end);
+    
+    
+    svg {
+        width: 28px;
+      }
     
     span {
         position: absolute;
@@ -83,16 +88,24 @@
 
     .field1 {
         width: 20%;
-        padding: 0 6rem;
+        padding: 0 2rem;
     }
 
     .field2 {
-        width: 80%;
+        width: 70%;
         padding: 0 6rem;
 
+        span {
+            // width: 30px;
+        }
         a:nth-child(2) {
             font-size: 1.2rem;
-        }
+        }          
+    }
+}
 
+@include lg {
+    .field2 {
+        width: 80%;
     }
 }

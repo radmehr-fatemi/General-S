@@ -6,9 +6,16 @@
     }
   }
 
+  @keyframes ShowW {
+    0% {
+      width: 0px;
+      opacity: .1;
+    }
+  }
+
 @keyframes ShowScrollTop {
   0% {
     transform: translateY(-100%);
-  }
-}
+  }  
+}  
 

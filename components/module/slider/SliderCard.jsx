@@ -9,24 +9,23 @@ import 'swiper/css/pagination';
 import CardS from "../card/CardS";
 
 export default function SliderCard({ products, title }) {
-    console.log(products)
     return (
         <div className='slider_card'>
             <h2> {title} :</h2>
             <Swiper
-                slidesPerView={2}
+                slidesPerView={1.8}
                 spaceBetween={30}
                 breakpoints={{
                     '480': {
-                        slidesPerView: 3,
+                        slidesPerView: 2.5,
                         spaceBetween: 30,
                     },
                     '768': {
-                        slidesPerView: 4,
+                        slidesPerView: 3.5,
                         spaceBetween: 30,
                     },
                     '960': {
-                        slidesPerView: 5,
+                        slidesPerView: 4,
                         spaceBetween: 30,
                     },
                     '1200': {
@@ -55,6 +54,11 @@ export default function SliderCard({ products, title }) {
                     position: relative;
                     padding: .8rem;
                     padding-right: 0;
+                    animation: Show .2s;
+                    }
+
+                    .slider_card h2 {
+                        margin-bottom:.2rem;
                     }
 
                     .slider_card .swiper {
