@@ -88,6 +88,7 @@ export default async function handler(req, res) {
             })
         }
     }
+
     if (method === "PURGE") {
         console.log(method)
         try {
@@ -106,4 +107,20 @@ export default async function handler(req, res) {
         }
     }
 
+    if (method === "DELETE") {
+        try {
+            const customer = await CustomerC.findOneAndDelete(body._id ? {_id: body._id } : { id: body.id });
+
+            res.status(201).json({
+                status: "success",
+                massage: "Deleted data",
+            })
+        } catch (err) {
+            console.log("Error in delete data #/api/cart")
+            res.status(500).json({
+                status: "failed",
+                massage: "Error in server",
+            })
+        }
+    }
 }

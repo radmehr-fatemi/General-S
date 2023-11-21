@@ -123,7 +123,6 @@ const reducer = (state, action) => {
 
 const CartContextProvider = ({ children }) => {
 
-    const [pData, settPData] = useState([]);
     const [state, dispatch] = useReducer(reducer, initialState);
 
     useEffect(() => {

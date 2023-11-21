@@ -13,7 +13,7 @@ export default function SliderCard({ products, title }) {
         <div className='slider_card'>
             <h2> {title} :</h2>
             <Swiper
-                slidesPerView={1.8}
+                slidesPerView={1.7}
                 spaceBetween={30}
                 breakpoints={{
                     '480': {

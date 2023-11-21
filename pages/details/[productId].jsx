@@ -9,26 +9,8 @@ const Details = ({ product }) => {
 
 export default Details;
 
-export const getStaticPaths = async () => {
-    try {
-        const res = await fetch(`${process.env.BASE_URL}/products`);
-        const data = await res.json();
-        const items = data.products.slice(0, 10);
 
-        const paths = items.map(item => ({ params: { productId: item.id.toString() } }));
-        return {
-            paths,
-            fallback: "blocking" || true
-        }
-    } catch (err) {
-        console.log("Error in paths data #details/[productId]")
-        return {
-            paths: [{ params: { productId:'1' } }]
-        }
-    }
-}
-
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
     try {
         const { productId } = context.params;
         const res = await fetch(`${process.env.BASE_URL}/products/${productId}`);
@@ -36,8 +18,7 @@ export const getStaticProps = async (context) => {
         return {
             props: {
                 product: data
-            },
-            revalidate: 1 * 60 * 60
+            }
         }
     } catch (err) {
         console.log("Error in get data #details/[productId]")

@@ -3,7 +3,7 @@
 
 .detailsPage {
     animation: ShowPage .3s;
-    min-height: calc( 100vh - 78px );
+    min-height: calc(100vh - 78px);
     padding: .6rem 0;
     background-color: rgb(165, 192, 192);
 
@@ -11,6 +11,8 @@
         width: 50px;
         position: sticky;
         top: 4rem;
+        left: 1rem;
+        filter: drop-shadow(0 0 12px #666);
         cursor: pointer;
     }
 }
@@ -19,7 +21,7 @@
 .field2,
 .field3,
 .field4,
-.field5, 
+.field5,
 .field6 {
     padding: .4rem 0;
     border-bottom: 1px solid $color-shadow;
@@ -38,12 +40,12 @@
 
 .field1 {
     @include flex();
-    
+
     span {
         @include flex();
         font-size: 1.1rem;
     }
-        
+
     svg {
         width: 40px;
     }
@@ -70,7 +72,7 @@
             color: $color-blue2;
             font-weight: 700;
         }
-        
+
         &:nth-child(2) {
             color: $color-red;
             font-weight: 700;
@@ -84,7 +86,8 @@
     }
 }
 
-.field3 ,.field4 {
+.field3,
+.field4 {
     span:nth-child(1) {
         font-size: 1.1rem;
         margin-right: .2rem;
@@ -102,11 +105,7 @@
     }
 
     p {
-        margin-top: .1rem;
-        text-indent: .2rem
-    }
-
-    p {
+        margin-top: .2rem;
         font-size: .9rem
     }
 }
@@ -114,20 +113,49 @@
 .field6 {
     @include flex(center);
     border: none;
+    height: 60px;
 
     button {
         border: none;
-        width: 100px;
+        width: 80%;
         height: 30px;
         background-color: $color-blue;
         color: $color-white;
         border-radius: 4px;
         font-size: 1rem;
+        overflow: hidden;
+        animation: ShowB .1s;
 
         @include md {
             &:hover {
                 background-color: $color-blue2;
             }
         }
+    }
+}
+
+.field6Buttons {
+    background-color: $color-blue2;
+    @include flex();
+    padding: .2rem;
+    border-radius: 4px;
+    width: 200px;
+    height: 33px;
+    animation: ShowB .2s;
+    overflow: hidden;
+
+    button {
+        background: none;
+        font-size: 1.6rem;
+        height: 100%;
+        overflow: unset;
+    }
+
+    svg {
+        width: 24px;
+    }
+
+    span {
+        font-size: 1.2rem;
     }
 }
