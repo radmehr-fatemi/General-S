@@ -13,4 +13,18 @@ const findQuantity = ( data ,id ) => {
     }
 }
 
-export { shortHandler ,findQuantity }
+const totalCounter = (state) => {
+    const itemsCounter = state.selectedItems.reduce( (acc ,cur) => acc + cur.qty ,0);
+
+    const total = state.selectedItems.reduce( (acc ,cur) => acc + ( cur.qty * cur.price ) ,0);
+    
+    const totalDiscount = state.selectedItems.reduce( (acc ,cur) => acc + ( (cur.discountPercentage / 100) * (cur.price)  ),0);
+
+    const finalTotal = total - totalDiscount;
+
+    return {
+        total,itemsCounter ,totalDiscount ,finalTotal
+    }
+}
+
+export { shortHandler ,findQuantity ,totalCounter }

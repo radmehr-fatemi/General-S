@@ -1,4 +1,8 @@
 import { createContext, useEffect, useReducer, useState } from "react";
+import { useRouter } from "next/router";
+
+//function
+import { totalCounter } from "../helper/functions";
 
 export const CartContext = createContext();
 
@@ -52,7 +56,8 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 selectedItems: [...state.selectedItems],
-                checkout: false
+                checkout: false,
+                ...totalCounter(state)
             }
 
         case "INCREMENT":
@@ -64,6 +69,7 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 selectedItems: [...state.selectedItems],
+                ...totalCounter(state),
                 checkout: false
             }
 
@@ -76,6 +82,7 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 selectedItems: [...state.selectedItems],
+                ...totalCounter(state),
                 checkout: false
             }
 
@@ -89,6 +96,7 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 selectedItems: [...state.selectedItems],
+                ...totalCounter(state),
                 checkout: false
             }
 
@@ -111,9 +119,11 @@ const reducer = (state, action) => {
             }
 
         case "GET_DATA":
+            console.log("c")
             return {
                 ...state,
-                selectedItems: [...action.payload]
+                selectedItems: [...action.payload],
+                ...totalCounter(state),
             }
 
         default:
@@ -124,6 +134,7 @@ const reducer = (state, action) => {
 const CartContextProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
+    const { pathname } = useRouter();
 
     useEffect(() => {
         const fetchAPI = async () => {
@@ -133,7 +144,8 @@ const CartContextProvider = ({ children }) => {
             if ( data.status === "success" ) dispatch({ type: "GET_DATA" ,payload: data.data })
         }
         fetchAPI()
-    }, [])
+        if ( pathname && !state.selectedItems.length ) fetchAPI()
+    }, [pathname])
 
     
     return (

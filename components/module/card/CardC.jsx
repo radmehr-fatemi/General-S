@@ -31,7 +31,7 @@ const CardC = ({ productData }) => {
 
                 <div className={styles.field1_title} >
                     <h2> { shortHandler( title ,10 ) }... </h2>
-                    <p> {rating} % </p>
+                    <p> {dis} % </p>
 
                     <div className={styles.field1Buttons} >
                         {

@@ -17,6 +17,10 @@ const CartPage = () => {
         <div className={ styles.cart } >
             <div className={ styles.header } >
                 <h1>Cart</h1>
+
+                {/* <div>
+
+                </div> */}
             </div>
 
             <div className={ styles.cards } >
@@ -27,10 +31,11 @@ const CartPage = () => {
                 }
             </div>
 
+
             <div className={ styles.checkout } >
                 <div className={ styles.checkout_1 } >
                     <h4>Total:</h4>
-                    <p> { state.total } $ </p>
+                    <p> { state.finalTotal.toFixed(2) } $ </p>
                 </div>
 
                 <div className={ styles.checkout_2 } >
