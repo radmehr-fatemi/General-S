@@ -37,7 +37,7 @@ export default async function handler(req, res) {
     if (method === "POST") {
         const customers = await CustomerC.find();
 
-        if ( !customers.some( item => item._id === body._id )  ) {
+        if ( !customers.some( item => item._id === body?._id && item.id === body.id )  ) {
             try {
                 const customer = await CustomerC(body)
                 await customer.save()

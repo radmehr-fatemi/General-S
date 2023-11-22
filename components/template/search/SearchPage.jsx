@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,65 +13,61 @@ import SpinnerSearch from "../../../utils/spinner/SpinnerSearch";
 //Style
 import styles from "./SearchPage.module.scss";
 
-const SearchPage = () => {
+const SearchPage = ({ products }) => {
 
     const [value, setValue] = useState("");
-    const [productData, setProductData] = useState([]);
-    const [isShow, setIsShow] = useState(false);
-
-    const inputHandler = async (e) => {
-        setValue(e.target.value)
-        try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/products/search?q=${value}`);
-            const data = await res.json();
-            setProductData(data.products)
-        } catch (err) {
-            console.log("Error in get data #SearchPage")
-        }
-    }
+    const router = useRouter();
 
     const searchHandler = () => {
         if (!value) {
             toast.info("Please enter first")
         } else {
-            setIsShow(true)
+            router.push({
+                pathname: "/search",
+                query: { q: value }
+            })
         }
     }
 
     const crossHandler = () => {
         setValue("")
-        setIsShow(false)
+        router.push("/search")
     }
-    
+
+    useEffect(() => {
+        if ( !value ) setValue(router.query.q)
+    }, [])
+
     return (
-        <div className={ styles.searchPage } >
-            <div className={ styles.header } >
+        <div className={styles.searchPage} >
+            <div className={styles.header} >
                 <h1>what do you want ?</h1>
 
-                <div className={ styles.header_2 } >
-                    <span onClick={ crossHandler } style={ isShow ? { display:"inline" } : { display:"none" } } > <Cross /> </span>
-                    <input type="text" placeholder="search" value={value} onChange={inputHandler} />
+                <div className={styles.header_2} >
+                    <span onClick={crossHandler} style={!!value ? { display: "inline" } : { display: "none" }} > <Cross /> </span>
+                    <input type="text" placeholder="search" value={value} onChange={(e) => setValue(e.target.value)} />
                     <button onClick={searchHandler} >Search</button>
                 </div>
             </div>
 
-            <div className={ styles.cards } >
+            <div className={styles.cards} >
                 {
-                    isShow && productData.length ?
-                        <div className={ styles.cards_rich } > 
+                    products.length ?
+                        <div className={styles.cards_rich} >
                             {
-                                productData.map(product => (
+                                products.map(product => (
                                     <CardC key={product.id} productData={product} />
                                 ))
                             }
                         </div> :
-                        
-                       isShow && !productData.length  ?
-                        <div className={ styles.cards_empty } >
-                            <p> Not found </p>
-                        </div> :
 
-                       !isShow && <SpinnerSearch />
+                        !products.length ?
+                                <SpinnerSearch /> :
+
+                            <div className={styles.cards_empty} >
+                                <p> Not found </p>
+                            </div> 
+
                 }
             </div>
 

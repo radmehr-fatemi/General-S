@@ -13,7 +13,8 @@ export default Details;
 export const getServerSideProps = async (context) => {
     try {
         const { productId } = context.params;
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/products/${productId}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL
+        }/products/${productId}`);
         const data = await res.json();
         return {
             props: {

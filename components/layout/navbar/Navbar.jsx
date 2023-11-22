@@ -15,7 +15,7 @@ const Navbar = () => {
             </div>
             <div className={ styles.field2 } >
                 <span></span>
-                <Link href={`/menu`} >Categories</Link>
+                <Link href={`/categories`} >Categories</Link>
                 <Link href={`/search`} > <VscSearch className={ styles.searchIcon } /> </Link>
                 <Link href={`/cart`} > <Cart /> </Link>
             </div>
