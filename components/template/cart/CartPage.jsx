@@ -58,7 +58,7 @@ const CartPage = () => {
                 !state.itemsCounter && !state.checkout ?
                 <div className={styles.cards_Empty}>
                     <p> Would you like buy? </p>
-                    <Link href="/" >Let's go </Link>
+                    <Link href="/" >Let`s go </Link>
                 </div>:
 
                 state.checkout &&
