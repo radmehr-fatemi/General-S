@@ -160,7 +160,7 @@
 
 .checkout_1,
 .checkout_2 {
-    padding: 1rem;
+    padding: 1rem 0;
     width: 50%;
     @include flex(center);
 
@@ -173,6 +173,7 @@
         margin-left: .4rem;
         color: $color-blue;
         font-weight: 700;
+        overflow: hidden;
     }
 
     button {
