@@ -107,6 +107,7 @@ const reducer = (state, action) => {
                 ItemsCounter: 0,
                 total: 0,
                 checkout: false,
+                ...totalCounter(state),
             }
 
         case "CHECKOUT":
@@ -116,10 +117,10 @@ const reducer = (state, action) => {
                 ItemsCounter: 0,
                 total: 0,
                 checkout: true,
+                ...totalCounter(state),
             }
 
         case "GET_DATA":
-            console.log("c")
             return {
                 ...state,
                 selectedItems: [...action.payload],

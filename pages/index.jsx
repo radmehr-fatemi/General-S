@@ -3,7 +3,8 @@ import Spinner from "../utils/spinner/Spinner";
 import HomePage from "../components/template/home/HomePage";
 
 const Home = ( props ) => {
-    if ( !Object.keys(props).length ) return <Spinner />
+    
+    if ( !Object.keys(props).length )  return <Spinner />
     return <HomePage data={props} />
 };
 
