@@ -1,0 +1,93 @@
+@import "../../../styles/Keyframes.scss";
+@import "../../../styles/variables.scss";
+
+.categoriesPage {
+    @include mx();
+    @include flex(flex-start);
+    flex-direction: column;
+    min-height: 90vh;
+    width: 100vw;
+    padding: 1rem
+}
+
+.header {
+    @include flex();
+    width: 100%;
+
+    svg ,h1,p {
+        // width: 1%;
+    }
+
+    svg {
+        filter: drop-shadow(0 0 12px #042c36);
+        width: 42px;
+        position: fixed;
+        top: 4rem;
+        z-index: 100;
+        animation: Show .3s;
+        cursor: pointer;
+    }
+
+    h1 {
+        background-color: $color-blue2;
+        color: $color-white;
+        width: fit-content;
+        padding: .4rem 2rem;
+        border-bottom-right-radius: 40%;
+        border-top-left-radius: 40%;
+        animation: Show .3s;
+    }
+}
+
+.list {
+    padding: 1rem 0;
+    @include flex(center);
+    flex-direction: column;
+
+    a {
+        margin: .4rem 0;
+        background-color: $color-blue2;
+        color: $color-white;
+        padding: .4rem 1rem;
+        border-bottom-right-radius: 50%;
+        border-top-left-radius: 50%;
+        animation: ShowEmpty .3s;
+
+        @include md {
+            &:hover {
+                transition: all .2s;
+                padding: .4rem 1.4rem;
+                font-size: 1.4rem;
+                // box-shadow: 0 0 10px rgb(73, 130, 130);
+            }
+        }
+    }
+}
+
+// --------------------------------------------
+@include md {
+    .header {
+        justify-content: space-around;
+
+        svg {
+            width: 50px;
+        }
+
+        h1 {
+            width: 300px;
+            text-align: center;
+            padding: .8rem;
+        }
+    }
+
+    .list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 60%;
+
+        a {
+            margin: 1rem;
+            font-size: 1.2rem;
+        }
+    }
+}
