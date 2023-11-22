@@ -30,7 +30,7 @@ const CardC = ({ productData }) => {
                 </Link>
 
                 <div className={styles.field1_title} >
-                    <h2> { shortHandler( title ,10 ) }... </h2>
+                    <h2> { shortHandler( title ,9 ) }... </h2>
                     <p> {dis} % </p>
 
                     <div className={styles.field1Buttons} >
