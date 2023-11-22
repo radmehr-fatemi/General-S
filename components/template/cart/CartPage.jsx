@@ -94,7 +94,7 @@ const CartPage = () => {
                         <div className={styles.checkout} >
                             <div className={styles.checkout_1} >
                                 <h4>Total:</h4>
-                                <p> {state.finalTotal?.toFixed(2)} </p>
+                                <p> {state.finalTotal?.toFixed(2)} $ </p>
                             </div>
 
                             <div className={styles.checkout_2} >
