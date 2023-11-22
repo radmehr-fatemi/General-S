@@ -7,7 +7,7 @@ const Spinner = () => {
     const router = useRouter();
     const [late, setLate] = useState(false);
 
-    setTimeout(() => setLate(true), 10000)
+    setTimeout(() => setLate(true), 6000)
 
     return (
         <div style={{
