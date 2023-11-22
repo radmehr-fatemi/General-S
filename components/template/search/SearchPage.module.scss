@@ -22,10 +22,16 @@
     z-index: 1;
     animation: Show .3s;
     margin: 1rem auto;
+
+    svg {
+        width: 40px;
+        cursor: pointer;
+    }
     
     h1 {
         font-size: 1.6rem;
-        padding: .4rem
+        padding: .4rem;
+        display: inline-block;
     }
 }
 

@@ -22,7 +22,7 @@ const CategoriesPage = ({ categories }) => {
             <div className={styles.list} >
                 {
                     categories.map((item, index) => (
-                        <Link href={`/search?q=${item}`} key={index} > {item} </Link>
+                        <Link href={`/categories/${item}`} key={index} > {item} </Link>
                     ))
                 }
             </div>

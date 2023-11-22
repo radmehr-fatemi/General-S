@@ -41,6 +41,7 @@ const SearchPage = ({ products }) => {
     return (
         <div className={styles.searchPage} >
             <div className={styles.header} >
+            <span onClick={ () => router.back() }> <Cross /> </span>
                 <h1>what do you want ?</h1>
 
                 <div className={styles.header_2} >
@@ -61,12 +62,13 @@ const SearchPage = ({ products }) => {
                             }
                         </div> :
 
-                        !products.length ?
-                                <SpinnerSearch /> :
-
-                            <div className={styles.cards_empty} >
+                        !products.length && router.query.q ?
+                        
+                        <div className={styles.cards_empty} >
                                 <p> Not found </p>
-                            </div> 
+                            </div> : 
+
+                                <SpinnerSearch /> 
 
                 }
             </div>

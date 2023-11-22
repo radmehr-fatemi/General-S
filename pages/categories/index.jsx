@@ -11,7 +11,7 @@ export default Categories;
 
 export const getStaticProps = async () => {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/products/categories`);
+        const res = await fetch(`${process.env.BASE_URL}/products/categories`);
         const data = await res.json();
 
         return {

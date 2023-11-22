@@ -13,7 +13,7 @@ export default Search;
 
     const { query: { q } } = context;
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/products/search?q=${q}`);
+        const res = await fetch(`${process.env.BASE_URL}/products/search?q=${q}`);
         const data = await res.json();
         return {
             props: {

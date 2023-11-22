@@ -1,0 +1,57 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/Keyframes.scss";
+
+.categoryPage {
+    @include mx();
+    @include flex(flex-start);
+    flex-direction: column;
+    width: 100vw;
+    min-height: 90vh;
+}
+
+.header {
+    @include flex();
+    width: 100%;
+    padding: 1rem;
+
+    svg ,h1,p {
+        // width: 1%;
+    }
+
+    svg {
+        filter: drop-shadow(0 0 8px #042c36);
+        width: 42px;
+        position: fixed;
+        top: 4rem;
+        z-index: 100;
+        animation: Show .3s;
+        cursor: pointer;
+        border-radius: 50%;
+        backdrop-filter: blur(8px);
+    }
+
+    h1 {
+        background-color: $color-blue2;
+        color: $color-white;
+        width: fit-content;
+        padding: .4rem 2rem;
+        border-bottom-right-radius: 40%;
+        border-top-left-radius: 40%;
+        animation: Show .3s;
+    }
+}
+
+.cards {
+    @include flex(flex-start);
+    flex-wrap: wrap;
+    padding: .4rem;
+}
+
+@include md {
+    .header {
+        width: 80%;
+    }
+    .cards {
+        width: 80%;
+    }
+}
