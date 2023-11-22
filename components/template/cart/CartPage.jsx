@@ -63,7 +63,7 @@ const CartPage = () => {
 
                 state.checkout &&
                 <div className={styles.cards_Empty} >
-                    <p> Would you like buy more? </p>
+                    <p> Would you like buy? </p>
                     <Link href="/" >Let`s go </Link>
                 </div>
 

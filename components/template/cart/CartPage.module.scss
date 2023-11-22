@@ -82,13 +82,14 @@
 
 .cards_Empty {
     width: 100%;
+    padding: .4rem;
     height: 200px;
     @include flex(center);
     flex-direction: column;
     animation: Show .3s;
 
     p {
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: $color-blue;
         font-weight: 700;
     }
@@ -120,6 +121,7 @@
 
     p {
         font-size: 1.4rem;
+        font-weight: 700;
         padding: .4rem;
         animation: Show .3s;
     }
@@ -128,6 +130,7 @@
 .checkout_1,
 .checkout_2 {
     padding: 1rem;
+    width: 50%;
     @include flex(center);
 
     h4 {
@@ -139,6 +142,7 @@
         margin-left: .4rem;
         color: $color-blue;
         font-weight: 700;
+        width: 140px;
     }
 
     button {
@@ -149,4 +153,7 @@
         border-radius: 4px;
         font-size: 1.2rem;
     }
+}
+.checkout_1 {
+    width: 60%;
 }
