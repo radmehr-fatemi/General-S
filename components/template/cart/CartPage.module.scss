@@ -31,7 +31,7 @@
     width: 100%;
     @include flex();
 
-    span ,h1 ,p {
+    span ,h1 ,.buyMore {
         width: 33%;
     }
     
@@ -40,7 +40,28 @@
         cursor: pointer;
         animation: ShowPage .3s;
     }
+
 }
+
+.buyMore {
+    @include flex(flex-end);
+
+    p {
+        width: fit-content;
+        @include flex(flex-end);
+        color: $color-white;
+        background-color: $color-blue;
+        border-bottom-right-radius: 40px;
+        border-top-left-radius: 40px;
+        padding: 0 .8rem;
+        cursor: pointer;
+        
+        svg {
+            width: 30px;
+        }
+    }
+}
+    
 
 .header_fields {
     width: 100%;
@@ -124,6 +145,7 @@
         font-weight: 700;
         padding: .4rem;
         animation: Show .3s;
+        color: $color-blue;
     }
 }
 
@@ -155,4 +177,22 @@
 }
 .checkout_1 {
     width: 60%;
+}
+
+// ------------------Responsive------------------
+@include md {
+    .header {
+        width: 80%;
+    }
+
+    .cards {
+        justify-content: flex-start;
+    }
+}
+
+@include lg {
+    .header {
+        width: 50%;
+    }
+
 }

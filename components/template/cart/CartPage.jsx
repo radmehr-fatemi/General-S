@@ -15,6 +15,7 @@ import styles from "./CartPage.module.scss";
 
 //Icon
 import Trash2 from "../../icons/Trash2";
+import ArrowRight from "../../icons/ArrowRight";
 
 const CartPage = () => {
 
@@ -23,7 +24,7 @@ const CartPage = () => {
 
     if ( state.checkout ) {
         toast.success("Payment was successfully");
-        setTimeout( () => router.reload() ,1000)
+        setTimeout( () => router.reload() ,1500)
     }
 
     const clearHandler = () => {
@@ -38,7 +39,10 @@ const CartPage = () => {
                 <div className={styles.header_h1} >
                     <span onClick={ clearHandler } > <Trash2 /> </span>
                     <h1>Cart</h1>
-                    <p></p>
+
+                    <div className={ styles.buyMore } >
+                    <p onClick={ () => router.push("/") } > buy more <ArrowRight /> </p>
+                    </div>
                 </div>
 
                 <div className={styles.header_fields} >
