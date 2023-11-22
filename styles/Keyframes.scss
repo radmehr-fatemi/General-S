@@ -6,6 +6,13 @@
     }
   }
 
+  @keyframes UnShow {
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
   @keyframes ShowB {
     0% {
       height: 0;
