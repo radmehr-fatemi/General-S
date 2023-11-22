@@ -78,6 +78,21 @@
         }
 }
 
+.cartIcon {
+    position: relative;
+
+    p {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color: $color-blue2;
+        border-radius: 50%;
+        padding: 1px 5px;
+        color: $color-white;
+        font-size: .8rem;
+    }
+}
+
 // .searchIcon {}
 
 @include md {

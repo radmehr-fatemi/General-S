@@ -44,7 +44,7 @@ const SearchPage = ({ products }) => {
                 <h1>what do you want ?</h1>
 
                 <div className={styles.header_2} >
-                    <span onClick={crossHandler} style={!!value ? { animation:"Show .2s forwards"  } : { animation:"UnShow .2s forwards" }} > <Cross /> </span>
+                    <span onClick={crossHandler} style={!!value ? { animation:"Show .2s forwards"  } : { animation:"UnShow .1s forwards" }} > <Cross /> </span>
                     <input type="text" placeholder="search" value={value} onChange={(e) => setValue(e.target.value)} />
                     <button onClick={searchHandler} >Search</button>
                 </div>
