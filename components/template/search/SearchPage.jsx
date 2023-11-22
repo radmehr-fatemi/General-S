@@ -60,7 +60,7 @@ const SearchPage = () => {
                         <div className={ styles.cards_rich } > 
                             {
                                 productData.map(product => (
-                                    <CardC productData={product} />
+                                    <CardC key={product.id} productData={product} />
                                 ))
                             }
                         </div> :
