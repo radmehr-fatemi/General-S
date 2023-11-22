@@ -64,7 +64,7 @@ const CartPage = () => {
                 state.checkout &&
                 <div className={styles.cards_Empty} >
                     <p> Would you like buy more? </p>
-                    <Link href="/" >Let's go </Link>
+                    <Link href="/" >Let`s go </Link>
                 </div>
 
 
@@ -79,7 +79,7 @@ const CartPage = () => {
             {
                 !state.itemsCounter && !state.checkout ?
                     <div className={styles.checkout} >
-                        <p> You haven't choice anythings </p>
+                        <p> You haven`t choice anythings </p>
                     </div> :
 
                     state.checkout ?
