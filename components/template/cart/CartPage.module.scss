@@ -54,10 +54,17 @@
         border-bottom-right-radius: 40px;
         border-top-left-radius: 40px;
         padding: 0 .8rem;
+        font-size: .8rem;
         cursor: pointer;
         
         svg {
-            width: 30px;
+            width: 26px;
+        }
+
+        @include md {
+            &:hover {
+                background-color: $color-blue2;
+            }
         }
     }
 }
