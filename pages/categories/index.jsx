@@ -1,5 +1,5 @@
 //Component
-import CategoriesPage from "../../components/template/categories/CategoriesPage";
+import CategoriesPage from "../../components/template/categories/CategoriesPage.jsx";
 import Spinner from "../../utils/spinner/Spinner";
 
 const Categories = ({ categories }) => {
