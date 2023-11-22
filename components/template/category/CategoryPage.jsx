@@ -1,20 +1,21 @@
-//Component
 import { useRouter } from "next/router";
+
+//Component
 import Spinner from "../../../utils/spinner/Spinner";
+import CardC from "../../module/card/CardC";
 
 //Icon
 import Cross from "../../icons/Cross";
 
 //Style
 import styles from "./CategoryPage.module.scss";
-import CardC from "../../module/card/CardC";
 
 const CategoryPage = ({ products }) => {
-
-    if ( !products.length ) return <Spinner />
     
     const router = useRouter();
     const {category} = router.query;
+
+    if ( !products.length ) return <Spinner />
     
     return (
         <div className={styles.categoryPage} >
