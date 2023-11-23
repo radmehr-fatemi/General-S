@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 //Component
 import Spinner from "../../../utils/spinner/Spinner";
 import CardC from "../../module/card/CardC";
+import Head from "next/head";
 
 //Icon
 import Cross from "../../icons/Cross";
@@ -19,6 +20,11 @@ const CategoryPage = ({ products }) => {
     
     return (
         <div className={styles.categoryPage} >
+            <Head>
+                <title> Product category </title>
+                <meta name='description' content='category list fot shoos products' />
+            </Head>
+
             <div className={styles.header} >
                 <span onClick={ () => router.back() } > <Cross /> </span>
                 <h1> {category} </h1>

@@ -4,6 +4,7 @@ import Link from "next/link";
 
 //Component
 import SliderProduct from "../../module/slider/BannerProduct";
+import Head from "next/head";
 
 //Style
 import styles from "./DetailsPage.module.scss";
@@ -33,6 +34,11 @@ const DetailsPage = ({ productData }) => {
 
     return (
         <div className={styles.detailsPage} style={isCross ? { animation: "UnShowPage .3s forwards" } : { animation: "ShowPage .3s forward" }} >
+            <Head>
+                <title> Product Details </title>
+                <meta name='description' content='product details' />
+            </Head>
+            
             <span onClick={crossHandler} ><Cross /></span>
             <SliderProduct images={images} />
 
@@ -67,7 +73,7 @@ const DetailsPage = ({ productData }) => {
                 </div>
                 <div className={styles.field4} >
                     <span> BranCategory: </span>
-                    <Link href={`/category/${category}`} > {category} </Link>
+                    <Link href={`/categories/${category}`} > {category} </Link>
                 </div>
 
                 <div className={styles.field5} >

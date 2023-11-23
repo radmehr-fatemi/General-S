@@ -13,15 +13,15 @@ export default function SliderCard({ products, title }) {
         <div className='slider_card'>
             <h2> {title} :</h2>
             <Swiper
-                slidesPerView={1.7}
+                slidesPerView={1.6}
                 spaceBetween={30}
                 breakpoints={{
                     '480': {
-                        slidesPerView: 2.5,
+                        slidesPerView: 2,
                         spaceBetween: 30,
                     },
                     '768': {
-                        slidesPerView: 3.5,
+                        slidesPerView: 3,
                         spaceBetween: 30,
                     },
                     '960': {
@@ -47,28 +47,7 @@ export default function SliderCard({ products, title }) {
             </Swiper>
 
             <style>{`
-            .slider_card {
-                    max-width: 1600px;
-                    margin: 0 auto;
-                    width: 100vw;
-                    position: relative;
-                    padding: .8rem;
-                    padding-right: 0;
-                    animation: Show .2s;
-                    }
-
-                    .slider_card h2 {
-                        margin-bottom:.2rem;
-                    }
-
-                    .slider_card .swiper {
-                    width: 100%;
-                    height: 100%;
-                    }
-
-                    .slider_card .swiper-slide {
-                    height: fit-content !important;
-                    }
+          
                 `}</style>
         </div>
     );

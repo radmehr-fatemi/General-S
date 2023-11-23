@@ -9,6 +9,7 @@ import Cross from "../../icons/Cross";
 //Component
 import CardC from "../../module/card/CardC";
 import SpinnerSearch from "../../../utils/spinner/SpinnerSearch";
+import Head from "next/head";
 
 //Style
 import styles from "./SearchPage.module.scss";
@@ -35,17 +36,23 @@ const SearchPage = ({ products }) => {
     }
 
     useEffect(() => {
-        if ( !value ) setValue(router.query.q)
+        if (!value) setValue(router.query.q)
     }, [])
 
     return (
         <div className={styles.searchPage} >
+            <Head>
+                <title> Search Products </title>
+                <meta name='description' content='search to find products' />
+            </Head>
+
+
             <div className={styles.header} >
-            <span onClick={ () => router.back() }> <Cross /> </span>
+                <span onClick={() => router.push("/")}> <Cross /> </span>
                 <h1>what do you want ?</h1>
 
                 <div className={styles.header_2} >
-                    <span onClick={crossHandler} style={!!value ? { animation:"Show .2s forwards"  } : { animation:"UnShow .1s forwards" }} > <Cross /> </span>
+                    <span onClick={crossHandler} style={!!value ? { animation: "Show .2s forwards" } : { animation: "UnShow .1s forwards" }} > <Cross /> </span>
                     <input type="text" placeholder="search" value={value} onChange={(e) => setValue(e.target.value)} />
                     <button onClick={searchHandler} >Search</button>
                 </div>
@@ -63,12 +70,12 @@ const SearchPage = ({ products }) => {
                         </div> :
 
                         !products.length && router.query.q ?
-                        
-                        <div className={styles.cards_empty} >
-                                <p> Not found </p>
-                            </div> : 
 
-                                <SpinnerSearch /> 
+                            <div className={styles.cards_empty} >
+                                <p> Not found </p>
+                            </div> :
+
+                            <SpinnerSearch />
 
                 }
             </div>

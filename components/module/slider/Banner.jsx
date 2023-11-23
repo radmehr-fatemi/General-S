@@ -69,69 +69,67 @@ export default function Slider() {
 
       <style>{`
 
-          .banner {
-            max-width:1600px;
-            margin: 0 auto;
-            position: relative;
-            width: 100vw;
-            animation: Show .3s;
-          }
+        
+.banner {
+  max-width:1600px;
+  margin: 0 auto;
+  position: relative;
+  width: 100vw;
+  animation: Show .3s;
+  padding: .4rem;
+}
 
-          .banner img {
-                width: 100%;
-                height: 240px;
-            }
+.banner img {
+      width: 100%;
+      height: 240px;
+      border-top-right-radius: 40%;
+      border-bottom-left-radius: 40%;
+  }
 
-            .slider_div {
-              width:100%;
-              height:fit-content;
-              position:relative;
-              overflow:hidden;
-            }
+  .slider_div {
+    width:100%;
+    height:fit-content;
+    position:relative;
+    overflow:hidden;
+  }
 
-            .slider_div p {
-              position:absolute;
-              top:0;
-              color:#fff;
-              width:100%;
-              height:98%;
-              display:flex;
-              justify-content:center;
-              align-items:center;
-              font-size: 2rem;
-              backdrop-filter: blur(2px);
-              text-shadow: 0 0 12px #111;
-            }
-            
-            .banner .swiper {
-            width: 100%;
-            height: 100%;
-          }
+  .slider_div p {
+    position:absolute;
+    top:0;
+    color:#fff;
+    width:100%;
+    height:98%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 2rem;
+    backdrop-filter: blur(2px);
+    text-shadow: 0 0 12px #111;
+  }
+  
+  .banner .swiper {
+  width: 100%;
+  height: 100%;
+}
 
-          .banner .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
+.banner .swiper-slide {
+}
 
-          .banner .swiper-button-next,
-          .banner .swiper-button-prev {
-              right:10px;
-              padding: 20px;
-              color: #fff !important;
-          }
+.banner .swiper-button-next,
+.banner .swiper-button-prev {
+    right:10px;
+    padding: 20px;
+    color: #fff !important;
+}
 
-          @media ( min-width: 768px ) {
-              .banner img {
-                height: 400px;
-              }
-            .slider_div p {
-              font-size:3rem;
-            }
-          }
+@media ( min-width: 768px ) {
+    .banner img {
+      height: 400px;
+    }
+  .slider_div p {
+    font-size:3rem;
+  }
+}
 
         `}</style>
     </div>
